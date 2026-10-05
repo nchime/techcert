@@ -45,7 +45,7 @@ export default function ThemeToggle() {
   const toggle = () => {
     document.documentElement.setAttribute("data-theme", next);
     try {
-      localStorage.setItem("techcert-theme", next);
+      localStorage.setItem("aiskillpath-theme", next);
     } catch {
       /* storage blocked */
     }

@@ -14,7 +14,7 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "무료 AI 인증서 · 배지 한장 가이드 | techCert",
+  title: "무료 AI 인증서 · 배지 한장 가이드 | AISkillPath",
   description:
     "Anthropic AI Fluency, Databricks Generative AI Fundamentals, Hugging Face AI Agents Course, Google Skills, Microsoft Applied Skills, IBM SkillsBuild, NVIDIA DLI, OpenAI Academy까지 — 무료로 획득할 수 있는 AI 인증서와 배지를 한 페이지에 정리한 인포그래픽 가이드.",
   keywords: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
 };
 
-const themeScript = `(function(){try{var s=localStorage.getItem("techcert-theme");var t=(s==="light"||s==="dark")?s:(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`;
+const themeScript = `(function(){try{var s=localStorage.getItem("aiskillpath-theme");var t=(s==="light"||s==="dark")?s:(window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

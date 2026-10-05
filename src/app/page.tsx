@@ -49,9 +49,9 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
           <a href="#top" className="flex items-center gap-2 text-sm font-bold tracking-tight">
             <span className="grid h-6 w-6 place-items-center rounded-md bg-accent text-[11px] text-black">
-              TC
+              AS
             </span>
-            <span>techCert</span>
+            <span>AISkillPath</span>
             <span className="hidden text-faint sm:inline">/ 무료 AI 인증서 한장 가이드</span>
           </a>
           <nav className="flex items-center gap-1 text-xs text-muted sm:gap-2">
@@ -413,9 +413,9 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-2 text-sm font-bold">
                 <span className="grid h-6 w-6 place-items-center rounded-md bg-accent text-[11px] text-black">
-                  TC
+                  AS
                 </span>
-                techCert
+                AISkillPath
               </div>
               <p className="mt-3 max-w-md text-xs leading-relaxed text-faint">
                 외부 교육 기관의 공식 페이지로 연결되는 링크 모음입니다. 과정 내용 · 배지 조건 · 언어 지원은
@@ -439,7 +439,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-6 text-[11px] text-faint">
-            <span>© {new Date().getFullYear()} techCert · 무료 AI 인증서 한장 가이드</span>
+            <span>© {new Date().getFullYear()} AISkillPath · 무료 AI 인증서 한장 가이드</span>
             <span>All links open in a new tab.</span>
           </div>
         </div>
