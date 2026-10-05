@@ -115,14 +115,14 @@ export default function Home() {
               </a>
             </div>
 
-            <dl className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {/* <dl className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {stats.map((s) => (
                 <div key={s.label} className="rounded-2xl bg-surface-2 p-4 hairline sm:p-5">
                   <dt className="text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">{s.value}</dt>
                   <dd className="mt-1 text-xs text-dim">{s.label}</dd>
                 </div>
               ))}
-            </dl>
+            </dl> */}
           </div>
         </section>
 
@@ -149,14 +149,17 @@ export default function Home() {
                     i !== comparison.length - 1 ? "border-b border-line-soft" : ""
                   }`}
                 >
-                  <span className="flex items-center gap-3 text-sm font-semibold text-foreground">
+                  <a
+                    href={`#${row.id}`}
+                    className="flex items-center gap-3 text-sm font-semibold text-foreground transition hover:text-accent"
+                  >
                     <BrandIcon
                       id={row.id}
                       className="h-4 w-4 shrink-0"
                       style={{ color: byId[row.id].accent }}
                     />
                     {row.course}
-                  </span>
+                  </a>
                   <span className="text-sm text-muted">
                     <span className="mr-2 text-xs text-faint md:hidden">소요시간</span>
                     {row.time}

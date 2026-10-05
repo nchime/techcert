@@ -1,5 +1,9 @@
 # AISkillPath — 무료 AI 인증서 · 배지 한 장 가이드
 
+🔗 **배포 사이트**: [https://techcert-eight.vercel.app](https://techcert-eight.vercel.app)
+
+![AISkillPath 메인 페이지](mainpage.png)
+
 외부 교육 기관의 **공식 무료** AI 과정 8종을 한 페이지에 정리한 Next.js 인포그래픽 사이트입니다.
 소요시간 · 언어 · 획득 자격 · 이동 링크를 비교하고 바로 시작할 수 있습니다.
 
