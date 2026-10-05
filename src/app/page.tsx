@@ -283,10 +283,9 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className={
                           link.primary
-                            ? "inline-flex w-full items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-black transition hover:brightness-110 sm:min-w-[200px] sm:flex-1"
+                            ? "inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-black transition hover:brightness-110 sm:min-w-[200px] sm:flex-1"
                             : "inline-flex w-full shrink-0 items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold text-muted hairline transition hover:bg-surface-hover hover:text-foreground sm:w-auto"
                         }
-                        style={link.primary ? { background: course.accent } : undefined}
                       >
                         {link.label}
                         <span aria-hidden>↗</span>
