@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-dim: var(--dim);
+  --color-faint: var(--faint);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-surface-hover: var(--surface-hover);
+  --color-subtle: var(--subtle);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-accent: var(--brand);
+  --color-accent-ink: var(--brand-ink);
+  --color-positive: var(--positive);
+  --color-header: var(--header);
+  --font-sans: var(--font-inter), var(--font-noto-kr), system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #07070b;
+  --foreground: #ececf1;
+  --muted: rgba(255, 255, 255, 0.7);
+  --dim: rgba(255, 255, 255, 0.55);
+  --faint: rgba(255, 255, 255, 0.4);
+  --surface: rgba(255, 255, 255, 0.035);
+  --surface-2: rgba(255, 255, 255, 0.045);
+  --surface-3: rgba(255, 255, 255, 0.055);
+  --surface-hover: rgba(255, 255, 255, 0.09);
+  --subtle: rgba(0, 0, 0, 0.3);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-soft: rgba(255, 255, 255, 0.07);
+  --dot: rgba(255, 255, 255, 0.12);
+  --brand: #d97757;
+  --brand-ink: #d97757;
+  --positive: #4ade80;
+  --header: rgba(7, 7, 11, 0.75);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --background: #f5f5f7;
+  --foreground: #17171c;
+  --muted: rgba(23, 23, 28, 0.72);
+  --dim: rgba(23, 23, 28, 0.58);
+  --faint: rgba(23, 23, 28, 0.45);
+  --surface: #ffffff;
+  --surface-2: #ffffff;
+  --surface-3: rgba(23, 23, 28, 0.04);
+  --surface-hover: rgba(23, 23, 28, 0.055);
+  --subtle: rgba(23, 23, 28, 0.05);
+  --line: rgba(23, 23, 28, 0.12);
+  --line-soft: rgba(23, 23, 28, 0.08);
+  --dot: rgba(23, 23, 28, 0.14);
+  --brand: #d97757;
+  --brand-ink: #a34a2a;
+  --positive: #15803d;
+  --header: rgba(245, 245, 247, 0.8);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+::selection {
+  background: rgba(217, 119, 87, 0.35);
+}
+
+.course-accent-text {
+  color: var(--course-accent, currentColor);
+}
+
+[data-theme="light"] .course-accent-text {
+  color: var(--course-accent-ink, currentColor);
+}
+
+@utility page-shell {
+  background-image:
+    radial-gradient(900px 520px at 12% -10%, rgba(217, 119, 87, 0.18), transparent 60%),
+    radial-gradient(760px 460px at 88% 4%, rgba(66, 133, 244, 0.16), transparent 62%),
+    radial-gradient(700px 520px at 50% 110%, rgba(255, 210, 30, 0.08), transparent 65%);
+}
+
+@utility hairline {
+  border: 1px solid var(--line);
+}
+
+@utility grid-dots {
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
