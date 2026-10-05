@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import BrandIcon from "@/components/BrandIcon";
 import ThemeToggle from "@/components/ThemeToggle";
 import { courses, faqs, roadmap } from "@/data/courses";
 
@@ -149,10 +150,10 @@ export default function Home() {
                   }`}
                 >
                   <span className="flex items-center gap-3 text-sm font-semibold text-foreground">
-                    <span
-                      className="h-2 w-2 shrink-0 rounded-full"
-                      style={{ background: byId[row.id].accent }}
-                      aria-hidden
+                    <BrandIcon
+                      id={row.id}
+                      className="h-4 w-4 shrink-0"
+                      style={{ color: byId[row.id].accent }}
                     />
                     {row.course}
                   </span>
@@ -210,7 +211,10 @@ export default function Home() {
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider">
-                        <span className="course-accent-text">{course.provider}</span>
+                        <span className="course-accent-text inline-flex items-center gap-1.5">
+                          <BrandIcon id={course.id} className="h-3.5 w-3.5" />
+                          {course.provider}
+                        </span>
                         <span className="text-faint">/</span>
                         <span className="text-faint">STEP {course.step}</span>
                       </div>
@@ -392,8 +396,9 @@ export default function Home() {
                     href={c.links[0].url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-black/80"
+                    className="inline-flex items-center gap-1.5 rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-black/80"
                   >
+                    <BrandIcon id={c.id} className="h-4 w-4" />
                     {c.provider} ↗
                   </a>
                 ))}
@@ -425,8 +430,9 @@ export default function Home() {
                     href={c.links[0].url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted transition hover:text-foreground"
+                    className="inline-flex items-center gap-1.5 text-muted transition hover:text-foreground"
                   >
+                    <BrandIcon id={c.id} className="h-4 w-4 shrink-0" />
                     {c.provider} — {c.title} <span aria-hidden>↗</span>
                   </a>
                 </li>
